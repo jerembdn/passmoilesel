@@ -21,6 +21,11 @@ export const env = createEnv({
 		// - Anti Connard Plugin
 		ANTI_CONNARD_RESTRICTED_WORDS: z.string(),
 		ANTI_CONNARD_SAVED_USERS: z.string(),
+
+		// - Join Plugin
+		JOIN_CHANNEL_ID: z.string(),
+		JOIN_WELCOME_COLOR: z.string(),
+		JOIN_WELCOME_BACKGROUNDS_FOLDER_URL: z.string().url(),
 	},
 	client: {},
 	clientPrefix: "_",

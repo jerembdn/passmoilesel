@@ -18,7 +18,7 @@ const antiConnardPlugin: DixtPlugin = (instance: dixt, options) => {
 		)
 			return;
 
-		const rand = Math.floor(Math.random() * 5);
+		const rand = Math.floor(Math.random() * 2);
 
 		if (rand === 0) {
 			if (
@@ -29,8 +29,14 @@ const antiConnardPlugin: DixtPlugin = (instance: dixt, options) => {
 			)
 				message.delete();
 
-			if (message.content.endsWith("quoi")) message.reply("feur");
+			if (message.content.endsWith("quoi")) {
+				const quoicoubehRand = Math.floor(Math.random() * 2);
+
+				if (quoicoubehRand === 0) message.reply("feur");
+				else message.reply("coubeh");
+			}
 			if (message.content.endsWith("oui")) message.reply("stiti");
+			if (message.content.endsWith("non")) message.reply("bril");
 		}
 	});
 

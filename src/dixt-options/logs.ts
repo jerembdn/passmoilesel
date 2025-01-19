@@ -3,7 +3,7 @@ import { env } from "../env";
 
 const dixtPluginLogsOptions: DixtPluginLogsOptions = {
 	webhookUrl: env.DISCORD_LOGS_WEBHOOK_URL,
-	name: "watilogs",
+	name: "amel reporter",
 };
 
 export default dixtPluginLogsOptions;

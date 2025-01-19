@@ -13,7 +13,7 @@ const mirrorHoursPlugin: DixtPlugin = () => {
 	}, 1 * 1000);
 
 	return {
-		name: "miror-hours",
+		name: "mirror-hours",
 	};
 };
 

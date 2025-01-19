@@ -18,7 +18,7 @@ const congratsPlugin: DixtPlugin = (instance: dixt, options) => {
 			return;
 
 		if (usersId.includes(message.author.id)) {
-			const rand = Math.floor(Math.random() * 20);
+			const rand = Math.floor(Math.random() * 10);
 
 			if (rand === 0) {
 				message.react("👏");

@@ -6,11 +6,11 @@ import { env } from "./env";
 import dixtPluginLogs from "dixt-plugin-logs";
 import dixtPluginLogsOptions from "./dixt-options/logs";
 import dixtPluginAffixOptions from "./dixt-options/affix";
-import mirrorHoursPlugin from "./plugins/mirror-hours";
 import congratsPlugin from "./plugins/congrats";
 import congratsPluginOptions from "./plugins/congrats/options";
 import antiConnardPlugin from "./plugins/anti-connards";
 import antiConnardPluginOptions from "./plugins/anti-connards/options";
+import joinPlugin from "./plugins/join";
 
 (async () => {
 	const instance = new dixt({
@@ -20,7 +20,8 @@ import antiConnardPluginOptions from "./plugins/anti-connards/options";
 			[dixtPluginAffix, dixtPluginAffixOptions],
 			[congratsPlugin, congratsPluginOptions],
 			[antiConnardPlugin, antiConnardPluginOptions],
-			mirrorHoursPlugin,
+			//mirrorHoursPlugin,
+			joinPlugin,
 		],
 	});
 
