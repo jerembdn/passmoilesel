@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "prebuild": "rimraf dist",
-    "start": "node dist/index",
+    "start": "node dist/src/index",
     "dev": "nodemon --watch \"src/**\" --ext \"ts,json\" --ignore \"src/**/*.spec.ts\" --exec \"ts-node src/index.ts\"",
     "build": "tsc",
     "lint": "eslint . --ext .ts",
