@@ -16,11 +16,11 @@ const tempVoicePlugin: DixtPlugin = async (instance: dixt, options) => {
 		throw new Error("Guild not found");
 	}
 
-  const baseChannel = await guild.channels.fetch(baseChannelId);
+	const baseChannel = await guild.channels.fetch(baseChannelId);
 
-  if (!baseChannel || !baseChannel.isVoiceBased) {
-    throw new Error("Base channel not found");
-  }
+	if (!baseChannel || !baseChannel.isVoiceBased) {
+		throw new Error("Base channel not found");
+	}
 
 	instance.client.on(Events.VoiceStateUpdate, async (oldMember, newMember) => {
 		const newUserChannel = newMember.channelId;
@@ -28,10 +28,10 @@ const tempVoicePlugin: DixtPlugin = async (instance: dixt, options) => {
 
 		// - User joins a voice channel
 		if (oldUserChannel === undefined && newUserChannel === baseChannelId) {
-			const tempChannel = guild.channels.create({
+			/* const tempChannel = guild.channels.create({
 				name: `${newMember.member?.displayName}'s channel`,
-        permissionOverwrites: 
-			});
+				permissionOverwrites:
+			}); */
 			// - User leaves a voice channel
 		} else if (newUserChannel === undefined) {
 			// User leaves a voice channel
@@ -39,12 +39,12 @@ const tempVoicePlugin: DixtPlugin = async (instance: dixt, options) => {
 		} else {
 		}
 
-		const newChannel = await instance.createVoiceChannel({
+		/* const newChannel = await instance.createVoiceChannel({
 			name: `${member.user.username}'s channel`,
 			parent: channel.parent,
 		});
 
-		await member.voice.setChannel(newChannel);
+		await member.voice.setChannel(newChannel); */
 	});
 
 	return {
